@@ -31,7 +31,7 @@ public class UserDataModel {
     @CreatedDate
     private Date dateCreated;
 
-    UserDataModel(String name, String sex, int age, String country) {
+    public UserDataModel(String name, String sex, int age, String country) {
         this.name = name;
         this.sex = sex;
         this.age = age;

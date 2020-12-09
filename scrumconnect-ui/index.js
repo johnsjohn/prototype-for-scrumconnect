@@ -1,6 +1,7 @@
 const nunjucks = require('nunjucks') 
 const userDataJS = require('./public/js/userData')
 const express = require('express')
+const countriesAPI = require('./src/countries.js')
 const path = require('path')
 const fetch = require('node-fetch');
 const app = express();
@@ -18,14 +19,7 @@ nunjucks.configure('public/', {
     express: app
 });
 
-let countries = [];
-
-fetch('https://restcountries.eu/rest/v1/region/Europe').then(res => res.json())
-    .then(json => {
-        json.forEach(country => {
-            countries.push({"country": country['name']})
-        })
-    });
+let countries = countriesAPI.getCountries();
 
 app.post('/', function(req, res) {
     console.log(req.body)
@@ -46,7 +40,8 @@ app.post('/', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-    res.render('views/userData.html',{"countries": countries});
+    countries.then(values => res.render('views/userData.html',{"countries": values})
+    );
 });
 
 app.listen(3000, ()=>{

@@ -4,12 +4,14 @@
   "description": "Prototype form for scrumconnect interview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "author": "johnsjohn",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "express": "^4.17.1",
+    "mocha": "^8.2.1",
     "node-fetch": "^2.6.1",
     "nunjucks": "^3.2.2"
   }
