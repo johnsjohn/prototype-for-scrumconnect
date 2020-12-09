@@ -123,3 +123,12 @@ Test command: ```npm run test```
  Confirmation Page: https://github.com/johnsjohn/prototype-for-scrumconnect/blob/master/scrumconnect-ui/demo/confirmation.png
  
 
+## Tests
+### Spring
+- Test framework: MockMvc. Test package name: test
+- Positive tests to ensure insert of male and female users.
+- Negetive tests to ensure rejection when fields are missing
+
+### Node
+- Test framework: mocha. Test package name test
+- Possitive tests to ensure fetch of contries from public API
