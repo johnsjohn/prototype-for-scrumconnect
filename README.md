@@ -119,6 +119,7 @@ Test command: ```npm run test```
  
  HTML 5, Bootstrap 4 (used for layout and css), JavaScript (no external libraries)
  
- 
+ Registration Home: https://github.com/johnsjohn/prototype-for-scrumconnect/blob/master/scrumconnect-ui/demo/form.png
+ Confirmation Page: https://github.com/johnsjohn/prototype-for-scrumconnect/blob/master/scrumconnect-ui/demo/confirmation.png
  
 
