@@ -86,3 +86,39 @@ Response
     }
 ]
 ```
+
+## Node.js
+
+Packages used:
+```
+{
+    "chai": "For Tests",
+    "express": "For UI REST endpoints",
+    "mocha": "For Tests",
+    "node-fetch": "To get list of contries from public api",
+    "nunjucks": "For template rendering"
+ }
+```
+
+Server port: 3000
+Web APP URL: ```http://localhost:3000/```
+Run command: ```node index.js```
+Test command: ```npm run test```
+
+### UI APIs
+
+ Get '/'
+ - This returns the nunjucks html page template with template-data contries fetched from public api.
+ 
+ Post '/'
+ - Accepts user registration data.
+ - Transfer the json data to API server and ensures successful user registration
+ - Return a template with success message addressing the user (done via nunjucks templating) 
+ 
+ ### Front End
+ 
+ HTML 5, Bootstrap 4 (used for layout and css), JavaScript (no external libraries)
+ 
+ 
+ 
+
