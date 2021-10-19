@@ -14,6 +14,8 @@ const API_SERVER_URL= 'http://localhost:8080/'
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 nunjucks.configure('public/', {
     autoescape: true,
     express: app
